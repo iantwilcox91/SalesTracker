@@ -204,10 +204,12 @@
 C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Program.cs
 C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Startup.cs
 C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\AccountController.cs
-C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20161207181748_Initial.cs
-C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20161207181748_Initial.Designer.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\ItemController.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20161208010420_Initial.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20161208010420_Initial.Designer.cs
 C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\ApplicationDbContext.cs
 C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\ApplicationUser.cs
+C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Models\Item.cs
 C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\ViewModels\LoginViewModel.cs
 C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\ViewModels\RegisterViewModel.cs

@@ -10,6 +10,14 @@ namespace SalesTracker.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public ApplicationDbContext()
+        {
+        }
+        public DbSet<Item> Items { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SalesTracker;integrated security=True");
+        }
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
 
@@ -18,6 +26,5 @@ namespace SalesTracker.Models
         {
             base.OnModelCreating(builder);
         }
-        //public DbSet<Model> Models { get; set; }
     }
 }
