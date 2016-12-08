@@ -200,7 +200,7 @@
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Program.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Startup.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\AccountController.cs"
-"C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\ItemController.cs"
+"C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Controllers\InventoryController.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20161208010420_Initial.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\20161208010420_Initial.Designer.cs"
 "C:\Users\epicodus\Desktop\SalesTracker\src\SalesTracker\Migrations\ApplicationDbContextModelSnapshot.cs"

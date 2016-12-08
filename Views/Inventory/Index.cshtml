@@ -1,0 +1,76 @@
+﻿@{
+    ViewData["Title"] = "Sales n stuff";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+@model IEnumerable<SalesTracker.Models.Item>
+@*@using SalesTracker.Models.Item*@
+
+    $(document).ready(function () {
+        $('.AddButton').click(function () {
+            $("hide").hide();
+            $("show").show();
+        });
+
+        $('.new-Item').submit(function (event) {
+            event.preventDefault();
+            $.ajax({
+                url: '@Url.Action("NewItem")',
+                type: 'POST',
+                dataType: 'json',
+                data: $(this).serialize(),
+                success: function (result) {
+                    var resultMessage = 'You\'ve added a new Item to the database!<br>Id:' + result.id + '<br>cost:' + result.cost + '<br>Description:' + result.description + '<br>name' +result.nameZnstuff+ '<br>Quantity:'+ result.quantity
+                $('#result6').html(resultMessage);
+                }
+            });
+            $("hide").show();
+            $("show").hide();
+        });
+
+    });
+</script>
+
+<h1>see complete inventory to help customers</h1>
+
+@if (User.Identity.IsAuthenticated)
+{
+<hide>
+    <button class="AddButton">Add</button>
+    <div id="result6"></div>
+</hide>
+
+
+<show style="display:none">
+    <div class="AddForm">
+        <h2>Submitting data with a POST request</h2>
+        <form action="NewItem" class="new-Item">
+            <label for="newName">Name: </label>
+            <input type="text" name="newName" /><br />
+            <label for="newCost">Cost: </label>
+            <input type="text" name="newCost" /><br />
+            <label for="newDescription">Description: </label>
+            <input type="text" name="newDescription" /><br />
+            <label for="newQuantity">Quantity: </label>
+            <input type="text" name="newQuantity" /><br />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</show>
+}
+else
+{
+    <p>you can login to add to this table</p>
+}
+<hr />
+<ul>
+    @foreach (var Item in Model)
+    {
+        <li>@Html.DisplayFor(modelItem => Item.Name)</li>
+        <li>@Html.DisplayFor(modelItem => Item.Cost)</li>
+        <li>@Html.DisplayFor(modelItem => Item.Description)</li>
+        <li>@Html.DisplayFor(modelItem => Item.Quantity)</li>
+        <hr />
+    }
+</ul>
